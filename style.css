@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Electrolize&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'electrolize';
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  /* background: linear-gradient(to right, #dfabc5 0%, #1da1f2 100%); */
+  background: linear-gradient(109.6deg, rgb(229, 233, 238) 20.2%, rgb(83, 98, 233) 91.1%);
+
+}
+
+.container {
+  background: #fff;
+  max-width: 350px;
+  width: 100%;
+  padding: 25px 30px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.container .logo {
+  font-family: "electrolize";
+  color: white;
+  position: absolute;
+  background: red;
+  padding: 6px;
+  left: 68%;
+  top: 20px;
+  border: 2px solid red;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.container .logo:hover{
+  transform: scale(1.05);
+}
+
+.container form .title {
+  font-size: 30px;
+  margin: 20px 0 10px 0;
+  position: relative;
+}
+
+.container form .title::before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 33px;
+  bottom: 2px;
+  left: 0;
+  border-radius: 5px;
+  background: #1da1f2;
+}
+
+.container form .input-box {
+  width: 100%;
+  height: 45px;
+  margin-top: 25px;
+  position: relative;
+}
+
+.container form .input-box input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border: none;
+}
+
+.container form .underline::before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: #ccc;
+  left: 0;
+  bottom: 0;
+}
+
+.container form .underline::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: red;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.3s ease;
+}
+
+.container form .input-box input:focus ~ .underline::after,
+.container form .input-box input:valid ~ .underline::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.container form .input-box input[type="submit"] {
+  font-size: 17px;
+  color: #fff;
+  border-radius: 5px;
+  background: red;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.container form .input-box input[type="submit"]:hover {
+  letter-spacing: 1px;
+  background: rgba(0, 0, 0, 0.15);
+  color: red;
+  font-weight: bolder;
+  border-radius: 10px;
+}
+
+.container .text{
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.container .github a,
+.container .twitter a,
+.container .facebook a{
+    display: block;
+    width: 100%;
+    height: 45px;
+    font-size: 15px;
+    text-decoration: none;
+    padding-left: 20px;
+    color: #fff;
+    line-height: 45px;
+    border-radius: 5px;
+    margin: 20px 0 15px 0;
+    transition: all .4s ease;
+}
+
+.container .github a{
+    background-color: #24292e;
+}
+
+.container .github a:hover{
+    background-color: #525e69;
+}
+
+.container .twitter a{
+    background-color: #1ad1f2;
+}
+
+.container .twitter a:hover{
+    background-color: #84e2f3;
+}
+
+.container .facebook a{
+    background: #4267b2;
+}
+
+.container .facebook a:hover{
+    background: #6d95e4;
+}
+
+.container .github i,
+.container .twitter i,
+.container .facebook i{
+    font-size: 22px;
+    padding-right: 22px;
+}
