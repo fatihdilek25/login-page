@@ -7,4 +7,4 @@
 
 ###  Sayfa ornegi ekran kaydı
 
-![](#login-page-screen.gif)
+![](login-page-screen.gif)
